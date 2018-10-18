@@ -150,7 +150,7 @@ Here is a figure:
 \caption{\textbf{\footnotesize Cumulative graph for subject scores}}
 \label{fig:1}
 ```{r echo=FALSE, out.width='40%', fig.align='center'}
-knitr::include_graphics("./Results/Graphs/CumAchieve.png")
+knitr::include_graphics("./Results/Graphs/figure.png")
 ```
 \centering
 {\footnotesize Source: Own calculations in Stata using 2004 Grade 6 Intermediate Phase Systemic Evaluation.}
