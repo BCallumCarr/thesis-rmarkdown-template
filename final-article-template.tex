@@ -111,7 +111,7 @@
 \title{A (Relatively) No-Nonsense Thesis Template}
 \pretitle{\vspace{\droptitle}\centering\huge}
 \posttitle{\par\vskip 0.5em}
-\author{Brad C. Carruthers}
+\author{Brad Carruthers}
 \preauthor{\centering\large}
 \postauthor{\par}
 \predate{\centering\large}
@@ -160,7 +160,7 @@
 \maketitle
 \thispagestyle{empty}
 
-%\author{Brad C. Carruthers}
+%\author{Brad Carruthers}
 %\date{August 28, 2019}
 
 
@@ -186,25 +186,28 @@
 
 \renewcommand{\vec}[1]{\mathbf{#1}}
 
+
+
 \section{\texorpdfstring{Introduction
 \label{Intro}}{Introduction }}\label{introduction}
 
 This is a template designed for a dissertation/thesis, or maybe even a
-fancy essay. It is a work in progress, requires knowledge of RMarkdown
-as well as Latex, and it would help if you knew how to navigate a .tex
-file to fix some niggly issues when knitting this. Please contact me if
-you have any suggestions/comments.
+fancy essay. It requires knowledge of RMarkdown and Latex, and it would
+also help if you knew how to navigate a .tex file to fix some niggly
+issues when knitting (compiling) this. It is a work in progress so
+please contact me if you have any suggestions/comments!
 
-The layout of the paper is as follows: Section \ref{Lit} gives a brief
-overview of relevant literature; section \ref{Data} presents the model
-and describes certain aspects of the data descriptively and graphically;
-\ref{OLS} is a section, section \ref{Recom} makes some recommendations
-for further research and section \ref{Concl} concludes.
+The layout of the template is as follows: Section \ref{Lit} ``gives a
+brief overview of relevant literature''; section \ref{Data} ``presents
+the model and describes certain aspects of the data descriptively and
+graphically''; \ref{OLS} is a section for results, section \ref{Recom}
+``makes some recommendations for further research'' and section
+\ref{Concl} ``concludes''.
 
 \section{\texorpdfstring{Brief Literature Review
 \label{Lit}}{Brief Literature Review }}\label{brief-literature-review}
 
-\subsection{Section 1}\label{section-1}
+\subsection{Section}\label{section}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -214,7 +217,7 @@ velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
 occaecat cupidatat non proident, sunt in culpa qui officia deserunt
 mollit anim id est laborum.
 
-\subsection{Section 2}\label{section-2}
+\subsection{Section}\label{section-1}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -227,9 +230,8 @@ mollit anim id est laborum.
 \section{\texorpdfstring{Empirical Methodology and Data
 \label{Data}}{Empirical Methodology and Data }}\label{empirical-methodology-and-data}
 
-\subsection{\texorpdfstring{Empirical Model: Education Production
-Function
-\label{Model}}{Empirical Model: Education Production Function }}\label{empirical-model-education-production-function}
+\subsection{\texorpdfstring{Empirical Model
+\label{Model}}{Empirical Model }}\label{empirical-model}
 
 This is an equation:
 
@@ -245,10 +247,20 @@ where \(A_{it}\) represents student \(i\)'s outcome at time \(t\),
 cumulatively up to time \(t\) and \(I_i\) is a student-specific ability
 vector.
 
-You can reference using bibtex like this: Shepherd (2011) notes that the
-education production form in equation \ref{eq:EP1} entails relatively
-strict assumptions regarding the dynamics of education and initial
-endowment measures.
+References are taken care of by using the \texttt{ref.bib} file in the
+\texttt{tex} folder. You can create/update this \texttt{ref.bib} file
+quite nicely using a program like Mendeley or just by going to Google
+Scholar, clicking on \texttt{cite} and then \texttt{BibTex} at the
+bottom of the article and copy-pasting this code into the
+\texttt{ref.bib} file. You can then reference in-text like this:
+Shepherd (2011), Shepherd (2011: 33) or with multiple authors like this:
+(Shepherd, 2011 \& Shepherd (2011)).
+
+You can refer in-text to equations like this: Equation \ref{eq:EP1}
+entails relatively strict blah blah blah\ldots{}
+
+The following is a little treat if you are trying to do some
+causal-econometrics analysis.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -282,8 +294,9 @@ endowment measures.
 
 \subsection{\texorpdfstring{Data \label{Desc}}{Data }}\label{data}
 
-Table \ref{tab:Desc} in the Appendix displays summary statistics. Table
-\ref{tab:Dep} below is not in the Appendix.
+Some more in-text referencing using Latex labels: Table \ref{tab:Desc}
+in the Appendix displays summary statistics, Table \ref{tab:Dep} below
+is not in the Appendix.
 
 \footnotesize
 \renewcommand{\thetable}{\arabic{table}}
@@ -292,16 +305,13 @@ Table \ref{tab:Desc} in the Appendix displays summary statistics. Table
 \label{tab:Dep}\\ \hline \hline
 Subject & Mean & Q1 & Median & Q3 \\
 \hline
-Maths&      27& 15&   23&  35\\
-Science&    41& 27&   40&  54\\
-English&   38& 18&   32&  55\\ \hline \hline
+Maths&      27& 15&   23&  35\\ \hline \hline
 \end{longtable}\begin{center} Source: Own calculations in Stata using 2004 Grade 6 Intermediate Phase Systemic Evaluation.\end{center}
 
 \normalsize
 
-\newpage
-
-Here is a figure:
+Here is a figure with an R chunk pointing to a file in the
+\texttt{results/graphs} folder:
 
 \setcounter{figure}{0} \renewcommand{\thefigure}{\arabic{figure}}
 
@@ -309,20 +319,26 @@ Here is a figure:
 \caption{\textbf{\footnotesize Cumulative graph for subject scores}}
 \label{fig:1}
 
-\begin{center}\includegraphics[width=0.4\linewidth]{./Results/Graphs/figure} \end{center}
+\begin{center}\includegraphics[width=0.4\linewidth]{./results/graphs/figure} \end{center}
 \centering
 {\footnotesize Source: Own calculations in Stata using 2004 Grade 6 Intermediate Phase Systemic Evaluation.}
 \end{figure}
 
 \normalsize
 
-Reference the figure in-text like this: figure \ref{fig:1} implies
-something.
+Again, you can reference the figure in-text: figure \ref{fig:1} is a
+figure and it displays etc. etc. etc.
 
-This is an organic figure generated with R code that is executed when
-the document is knitted:
+This is an organic figure generated with an R chunk that is executed
+when the document is knitted (the image is also saved in the folder
+\texttt{final-article-template\_files}):
 
 \begin{center}\includegraphics[width=0.4\linewidth]{final-article-template_files/figure-latex/unnamed-chunk-2-1} \end{center}
+
+Regarding R chunks: If you want a chunk's code to be printed, include
+\texttt{set\ echo\ =\ TRUE}. \texttt{message\ =\ FALSE} stops R printing
+package loading details and setting \texttt{warning\ =\ FALSE} should
+suppress most warnings.
 
 \newpage
 
@@ -486,8 +502,6 @@ commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
 velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
 occaecat cupidatat non proident, sunt in culpa qui officia deserunt
 mollit anim id est laborum.
-
-(Approximately 100 words)
 
 \newpage
 
