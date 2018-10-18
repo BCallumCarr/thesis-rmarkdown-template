@@ -95,8 +95,7 @@
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 
 %%% Include extra packages specified by user
-% Insert custom packages here as follows
-% \usepackage{tikz}
+\usepackage{amsmath}
 
 %%% Change title format to be more compact
 \usepackage{titling}
@@ -109,10 +108,10 @@
 %}
 
 \setlength{\droptitle}{-1em}
-\title{A (Relatively) No-Nonsense RMarkdown Thesis Template}
+\title{A (Relatively) No-Nonsense Thesis Template}
 \pretitle{\vspace{\droptitle}\centering\huge}
 \posttitle{\par\vskip 0.5em}
-\author{Bradley C. Carruthers}
+\author{Brad C. Carruthers}
 \preauthor{\centering\large}
 \postauthor{\par}
 \predate{\centering\large}
@@ -161,7 +160,7 @@
 \maketitle
 \thispagestyle{empty}
 
-%\author{Bradley C. Carruthers}
+%\author{Brad C. Carruthers}
 %\date{August 28, 2019}
 
 
@@ -319,6 +318,11 @@ Here is a figure:
 
 Reference the figure in-text like this: figure \ref{fig:1} implies
 something.
+
+This is an organic figure generated with R code that is executed when
+the document is knitted:
+
+\begin{center}\includegraphics[width=0.4\linewidth]{final-article-template_files/figure-latex/unnamed-chunk-2-1} \end{center}
 
 \newpage
 

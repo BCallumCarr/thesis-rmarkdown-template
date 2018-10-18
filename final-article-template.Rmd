@@ -1,32 +1,29 @@
 ---
-title: "A (Relatively) No-Nonsense RMarkdown Thesis Template"
-author: "Bradley C. Carruthers"
+title: "A (Relatively) No-Nonsense Thesis Template"
+author: "Brad C. Carruthers"
 date: "August 28, 2019"
-bibliography: tex/ref.bib       # Do not edit: Keep this naming convention and location.
-csl: tex/harvard-stellenbosch-university.csl
-toc: yes
-lot: yes
-lof: yes
+bibliography: tex/ref.bib       # Do not edit: Keep this naming convention and location
+# When you want to include more references you will need to update your ref.bib file
+csl: tex/harvard-stellenbosch-university.csl        # You can update this to suit the style of your referencing
+toc: yes        # Table of contents
+lot: yes        # List of tables
+lof: yes        # List of figures
 numbersections: yes             # Should sections (and thus figures and tables) be numbered?
 fontsize: 12pt                  # Set fontsize
 linestretch: 1.5                # Set distance between lines.
 output:
   pdf_document:
     keep_tex: TRUE
-    template: tex/tex-default.txt
-    fig_width: 3.5 # Adjust default figure sizes. This can also be done in the chunks of the text.
+    template: tex/tex-default.txt        # Default tex file where you can do some niggly work
+    fig_width: 3.5        # Adjust default figure sizes. This can also be done in the chunks of the text.
     fig_height: 3.5
-    include:
-      in_header: tex/packages.txt # Reference file with extra packages
 documentclass: "article"
-BottomCFooter: "\\footnotesize \\thepage\\" # Add a '#' before this line to remove footer.
-header-includes:
+BottomCFooter: "\\footnotesize \\thepage\\"       # Add a '#' before this line to remove footer.
+header-includes:        # Here you can include with extra packages
 - \usepackage{amsmath}
 - \usepackage{graphicx}
 - \usepackage{pdflscape}
 - \usepackage[bottom]{footmisc}
-# - \DeclareMathSizes{1}{1}{1}{1}
-# - \usepackage[capposition=top]{floatrow}
 ---
 
 ```{r setup, include=FALSE}
@@ -161,6 +158,13 @@ knitr::include_graphics("./Results/Graphs/CumAchieve.png")
 \normalsize
 
 Reference the figure in-text like this: figure \ref{fig:1} implies something.
+
+This is an organic figure generated with R code that is executed when the document is knitted:
+
+```{r echo=FALSE, out.width='40%', fig.align='center'}
+x <- c(1, 3, 5, 8)
+plot(x)
+```
 
 
 
