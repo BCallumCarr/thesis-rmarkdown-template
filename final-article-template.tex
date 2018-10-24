@@ -192,10 +192,13 @@
 \label{Intro}}{Introduction }}\label{introduction}
 
 This is a template designed for a dissertation/thesis, or maybe even a
-fancy essay. It requires knowledge of RMarkdown and Latex, and it would
-also help if you knew how to navigate a .tex file to fix some niggly
-issues when knitting (compiling) this. It is a work in progress so
-please contact me if you have any suggestions/comments!
+fancy essay. It requires
+\href{https://www.rstudio.com/products/rstudio/download/}{RStudio} and
+\href{https://www.latex-project.org/get/}{Latex} be installed, as well
+as knowledge of ``coding'' in RMarkdown and Latex. It would also help if
+you knew how to navigate a .tex file to fix some niggly issues when
+knitting (compiling) this. It \emph{is} a work in progress, so please
+contact me if you have any suggestions/comments!
 
 The layout of the template is as follows: Section \ref{Lit} ``gives a
 brief overview of relevant literature''; section \ref{Data} ``presents
@@ -207,17 +210,19 @@ graphically''; \ref{OLS} is a section for results, section \ref{Recom}
 \section{\texorpdfstring{Brief Literature Review
 \label{Lit}}{Brief Literature Review }}\label{brief-literature-review}
 
+\subsection{References}\label{references}
+
+References are taken care of by using the \texttt{ref.bib} file in the
+\texttt{tex} folder. You can create/update this \texttt{ref.bib} file
+quite nicely using a program like Mendeley or just by going to Google
+Scholar, clicking on \texttt{cite} and then \texttt{BibTex} at the
+bottom of the article and copy-pasting this code into the
+\texttt{ref.bib} file. You can then reference in-text like this:
+Shepherd (2011), Spaull (2013: 33) or with multiple authors like this:
+(Van der Berg, 2007 \& Hanushek (2010)) (the mulitple author layout does
+need some fixing).
+
 \subsection{Section}\label{section}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-mollit anim id est laborum.
-
-\subsection{Section}\label{section-1}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -247,21 +252,11 @@ where \(A_{it}\) represents student \(i\)'s outcome at time \(t\),
 cumulatively up to time \(t\) and \(I_i\) is a student-specific ability
 vector.
 
-References are taken care of by using the \texttt{ref.bib} file in the
-\texttt{tex} folder. You can create/update this \texttt{ref.bib} file
-quite nicely using a program like Mendeley or just by going to Google
-Scholar, clicking on \texttt{cite} and then \texttt{BibTex} at the
-bottom of the article and copy-pasting this code into the
-\texttt{ref.bib} file. You can then reference in-text like this:
-Shepherd (2011), Spaull (2013: 33) or with multiple authors like this:
-(Van der Berg, 2007 \& Hanushek (2010)) (the mulitple author layout does
-nees some fixing.
-
 You can refer in-text to equations like this: Equation \ref{eq:EP1}
 entails relatively strict blah blah blah\ldots{}
 
 The following is a little treat if you are trying to do some
-causal-econometrics analysis.
+causal-econometric analysis.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
