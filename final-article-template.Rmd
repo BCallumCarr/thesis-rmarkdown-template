@@ -67,7 +67,7 @@ A_{it}=f(T_i^{(t)},S_i^{(t)},P_i^{(t)},B_i^{(t)},I_i),
 
 where $A_{it}$ represents student $i$'s outcome at time $t$, $T_i^{(t)}$ represents teacher inputs cumulatively up to time $t$, $S_i^{(t)}$ represents school inputs cumulatively up to time $t$, $P_i^{(t)}$ represents peer inputs cumulatively up to time $t$, $B_i^{(t)}$ represents a vector of family background traits cumulatively up to time $t$ and $I_i$ is a student-specific ability vector.
 
-References are taken care of by using the `ref.bib` file in the `tex` folder. You can create/update this `ref.bib` file quite nicely using a program like Mendeley or just by going to Google Scholar, clicking on `cite` and then `BibTex` at the bottom of the article and copy-pasting this code into the `ref.bib` file. You can then reference in-text like this: @Shepherd2011, @Shepherd2011[p. 33] or with multiple authors like this: [@Shepherd2011 \& @Shepherd2011]. 
+References are taken care of by using the `ref.bib` file in the `tex` folder. You can create/update this `ref.bib` file quite nicely using a program like Mendeley or just by going to Google Scholar, clicking on `cite` and then `BibTex` at the bottom of the article and copy-pasting this code into the `ref.bib` file. You can then reference in-text like this: @Shepherd2011, @Spaull2013[p. 33] or with multiple authors like this: [@vanderBerg2007 \& @Hanushek2010] (the mulitple author layout does need some fixing). 
 
 You can refer in-text to equations like this: Equation \ref{eq:EP1} entails relatively strict blah blah blah...
 
