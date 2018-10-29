@@ -123,7 +123,7 @@ Again, you can reference the figure in-text: figure \ref{fig:1} is a figure and 
 
 This is an organic figure generated with an R chunk that is executed when the document is knitted (the image is also saved in the folder `final-article-template_files`):
 
-```{r echo=FALSE, out.width='40%', fig.align='center'}
+```{r echo=TRUE, out.width='40%', fig.align='center'}
 x <- c(1, 2, 6, 8)
 plot(x)
 ```

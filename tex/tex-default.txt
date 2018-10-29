@@ -1,4 +1,4 @@
-﻿\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$preprint, authoryear]{$documentclass$}
+\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$preprint, authoryear]{$documentclass$}
 
 \pagestyle{plain}
 
@@ -186,6 +186,12 @@ $endif$
 
 \renewcommand{\cftsubsecfont}{\normalfont\hypersetup{linkcolor=black}}
 \renewcommand{\cftsubsecafterpnum}{\hypersetup{linkcolor=black}}
+
+% code to insert to fix environment Shaded undefined issue with
+% showing code chunks in rticle IEEE template.
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
 
 \begin{document}
 
