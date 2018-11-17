@@ -428,5 +428,5 @@ Observations    &    11946         &    21738         &    21798         &    22
 
 \newpage
 
-\color{red}Note that the following references need to be re-ordered in the final .tex file manually so that they come after the **References**  heading (at least until I fix it). Also note how, compared to something like Microsoft Word, you don't have to worry about each reference's format, or about alphabetizing them - everything is done automatically via Latex and the `ref.bib` file in the `tex` folder.
+\color{red}Note that the following references need to be re-ordered in the final .tex file manually so that they come after the **References**  heading, and before the Appendix (at least until I fix it). Also note how, compared to something like Microsoft Word, you don't have to worry about each reference's format, or about alphabetizing them - everything is done automatically via Latex and the `ref.bib` file in the `tex` folder.
 \color{black}
