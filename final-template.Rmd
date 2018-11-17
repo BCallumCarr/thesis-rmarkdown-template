@@ -292,8 +292,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 \newpage
 
 
+\appendix
 
-# Appendix {.unnumbered}
+# Appendix
+
+## Table Subsection
 
 \setcounter{table}{0}
 \renewcommand{\thetable}{A\arabic{table}}
@@ -334,9 +337,15 @@ A table in the Appendix:
 \multicolumn{5}{@{}l}{Source: Own calculations in Stata using 2004 Grade 6 Intermediate Phase Systemic Evaluation.}
 \end{longtable}
 
+\normalsize
 
+
+
+## Longtable Subsection
 
 Another table in the Appendix spread over pages:
+
+\scriptsize
 
 \begin{longtable}[htbp] {p{8cm}*{5}{c}} \caption{
 \textbf{Teacher attributes for fixed effects across all three subjects}} \label{tab:FE} \\ \hline\hline
@@ -364,6 +373,8 @@ Observations    &    58538         &    58538         &    58538         &    58
 \multicolumn{6}{l}{Source: Own calculations in Stata using 2004 Grade 6 Intermediate Phase Systemic Evaluation.}\\
 \end{longtable}
 
+\normalsize
+
 
 
 Aaand one last one:
@@ -371,6 +382,8 @@ Aaand one last one:
 <!--
 %\begin{landscape}
 -->
+
+\scriptsize
 
 \begin{longtable}[htbp] {p{5cm}*{4}{c}|*{4}{c}} \caption{
 \textbf{Teacher attribute SES interactions for fixed effects, by SES}} \label{tab:FE_SES2} \\ \hline\hline
