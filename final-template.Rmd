@@ -4,7 +4,7 @@ author: "Brad Carruthers"
 date: "August 28, 2019"
 bibliography: tex/ref.bib       # Do not edit: Keep this naming convention and location
 # When you want to include more references you will need to update your ref.bib file
-csl: tex/harvard-stellenbosch-university.csl        # You can update this to suit the style of your referencing
+csl: tex/harvard-cite-them-right.csl        # You can update this to suit the style of your referencing
 toc: yes        # Table of contents
 lot: yes        # List of tables
 lof: yes        # List of figures
@@ -20,10 +20,6 @@ output:
 documentclass: "article"
 BottomCFooter: "\\footnotesize \\thepage\\"       # Add a '#' before this line to remove footer.
 header-includes:        # Here you can include with extra packages
-- \usepackage{amsmath}
-- \usepackage{graphicx}
-- \usepackage{pdflscape}
-- \usepackage[bottom]{footmisc}
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE)
@@ -127,6 +123,8 @@ This is an organic figure generated with an R chunk that is executed when the do
 x <- c(1, 2, 6, 8)
 plot(x)
 ```
+
+
 
 Regarding R chunks: If you want a chunk's code to be printed, include set `echo = TRUE`. `message = FALSE` stops R printing package loading details and setting `warning = FALSE` should suppress most warnings.
 
@@ -289,9 +287,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+
 \newpage
-
-
 \appendix
 
 # Appendix

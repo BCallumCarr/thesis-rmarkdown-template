@@ -95,7 +95,6 @@
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 
 %%% Include extra packages specified by user
-\usepackage{amsmath}
 
 %%% Change title format to be more compact
 \usepackage{titling}
@@ -264,9 +263,9 @@ quite nicely using a program like Mendeley or just by going to Google
 Scholar, clicking on \texttt{cite} and then \texttt{BibTex} at the
 bottom of the article and copy-pasting this code into the
 \texttt{ref.bib} file. You can then reference in-text like this:
-Shepherd (2011), Spaull (2013: 33) or with multiple authors like this:
-(Van der Berg, 2007 \& Hanushek (2010)) (the mulitple author layout does
-need some fixing).
+Shepherd (2011), Spaull (2013, p. 33) or with multiple authors like
+this: (Van der Berg, 2007 \& Hanushek (2010)) (the mulitple author
+layout does need some fixing).
 
 \subsection{Section}\label{section}
 
@@ -598,9 +597,13 @@ A table in the Appendix:
 \multicolumn{5}{@{}l}{Source: Own calculations in Stata using 2004 Grade 6 Intermediate Phase Systemic Evaluation.}
 \end{longtable}
 
+\normalsize
+
 \subsection{Longtable Subsection}\label{longtable-subsection}
 
 Another table in the Appendix spread over pages:
+
+\scriptsize
 
 \begin{longtable}[htbp] {p{8cm}*{5}{c}} \caption{
 \textbf{Teacher attributes for fixed effects across all three subjects}} \label{tab:FE} \\ \hline\hline
@@ -628,7 +631,11 @@ Observations    &    58538         &    58538         &    58538         &    58
 \multicolumn{6}{l}{Source: Own calculations in Stata using 2004 Grade 6 Intermediate Phase Systemic Evaluation.}\\
 \end{longtable}
 
+\normalsize
+
 Aaand one last one:
+
+\scriptsize
 
 \begin{longtable}[htbp] {p{5cm}*{4}{c}|*{4}{c}} \caption{
 \textbf{Teacher attribute SES interactions for fixed effects, by SES}} \label{tab:FE_SES2} \\ \hline\hline
@@ -671,31 +678,33 @@ Observations    &    11946         &    21738         &    21798         &    22
 
 \color{red}Note that the following references need to be re-ordered in
 the final .tex file manually so that they come after the
-\textbf{References} heading (at least until I fix it). Also note how,
-compared to something like Microsoft Word, you don't have to worry about
-each reference's format, or about alphabetizing them - everything is
-done automatically via Latex and the \texttt{ref.bib} file in the
-\texttt{tex} folder. \color{black}
+\textbf{References} heading, and before the Appendix (at least until I
+fix it). Also note how, compared to something like Microsoft Word, you
+don't have to worry about each reference's format, or about
+alphabetizing them - everything is done automatically via Latex and the
+\texttt{ref.bib} file in the \texttt{tex} folder. \color{black}
 
 \hypertarget{refs}{}
 \hypertarget{ref-Hanushek2010}{}
-Hanushek, E.A. 2010. The Difference is Great Teachers. In ed.
-\emph{Waiting for ``superman'': How we can save america's failing public
-schools}. 81--102.
+Hanushek, E. A. (2010) `The Difference is Great Teachers', in
+\emph{Waiting for `superman': How we can save america's failing public
+schools}, pp. 81--102.
 
 \hypertarget{ref-Shepherd2011}{}
-Shepherd, D.L. 2011. Constraints to school effectiveness: what prevents
-poor schools from delivering results? \emph{Stellenbosch Economic
-Working Papers}. 1--37.
+Shepherd, D. L. (2011) `Constraints to school effectiveness: what
+prevents poor schools from delivering results?', \emph{Stellenbosch
+Economic Working Papers}, pp. 1--37.
 
 \hypertarget{ref-Spaull2013}{}
-Spaull, N. 2013. Poverty \& privilege: Primary school inequality in
-South Africa. \emph{International Journal of Educational Development}.
-33:436--447.
+Spaull, N. (2013) `Poverty \& privilege: Primary school inequality in
+South Africa', \emph{International Journal of Educational Development}.
+Elsevier Ltd, 33, pp. 436--447. doi:
+\href{https://doi.org/10.1016/j.ijedudev.2012.09.009}{10.1016/j.ijedudev.2012.09.009}.
 
 \hypertarget{ref-vanderBerg2007}{}
-Van der Berg, S. 2007. Apartheid's Enduring Legacy: Inequalities in
-Education. \emph{Journal of African Economies}. 16(5):849--880.
+Van der Berg, S. (2007) `Apartheid's Enduring Legacy: Inequalities in
+Education', \emph{Journal of African Economies}, 16(5), pp. 849--880.
+doi: \href{https://doi.org/10.1093/jae/ejm017}{10.1093/jae/ejm017}.
 
 \newcommand\wordcount{
     \immediate\write18{texcount -sub=section \jobname.tex  | grep "Section" |     sed -e 's/+.*//' | sed -n \thesection p > 'count.txt'}
